@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.audronfs.rocketsci.model.Plateau;
 import com.audronfs.rocketsci.model.Rover;
+import com.audronfs.rocketsci.util.Constants;
 
 public class MarsRoverOperation {
 	private Plateau plateau = new Plateau();
@@ -39,11 +40,22 @@ public class MarsRoverOperation {
 	}
 	
 	private void setPlateauCoordinates(final String rawPlateauCoordinates) {
-		
+		String[] tokens;
+		tokens = rawPlateauCoordinates.split(Constants.SEPARATOR_SPLIT_CHARACTER);		
+		int right = Integer.parseInt(tokens[0]);
+		int top = Integer.parseInt(tokens[1]);
+		plateau.setCoordinates(right, top);
 	}
 	
 	private Rover initializeRover(String rawRoverPosition)  {
-		return null;
+		Rover rover;
+		String[] tokens;
+		tokens = rawRoverPosition.split(Constants.SEPARATOR_SPLIT_CHARACTER);		
+		int x = Integer.parseInt(tokens[0]);
+		int y = Integer.parseInt(tokens[1]);
+		String orientation = tokens[2];
+		rover = new Rover(x, y, orientation, plateau);
+		return rover;
 	
 	}	
 
