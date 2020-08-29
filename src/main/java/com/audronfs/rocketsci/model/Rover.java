@@ -62,12 +62,49 @@ public void startNavigation(Plateau plateau, List<Rover> roverList) {
 	}
 }	
 
-public void turnLeft() {}
+public void turnLeft() {
+	int left = ((position.getOrientation() == 0) ? Constants.CARDINAL_POINTS.length : position.getOrientation()) - 1;
+	position.setOrientation(left);
+}
 
-public void turnRight() {}
+public void turnRight() {
+	int right = (position.getOrientation() + 1) % Constants.CARDINAL_POINTS.length;
+	position.setOrientation(right);
+}
 
-public void moveForward(Plateau plateau, List<Rover> roverList) {		}
-	
+public void moveForward(Plateau plateau, List<Rover> roverList) {
+	if (errorMessage == null) {
+		switch (Constants.CARDINAL_POINTS[position.getOrientation()]) {
+		case Constants.NORTH:
+			moveForwardToNorth(plateau, roverList);
+			break;
+		case Constants.EAST:
+			moveForwardToEast(plateau, roverList);
+			break;
+		case Constants.SOUTH:
+			moveForwardToSouth(plateau, roverList);
+			break;
+		case Constants.WEST:
+			moveForwardToWest(plateau, roverList);
+			break;
+		}
+	}
+}
+	private void moveForwardToWest(Plateau plateau, List<Rover> roverList) {
+		
+	}
+
+	private void moveForwardToSouth(Plateau plateau, List<Rover> roverList) {
+		
+	}
+
+	private void moveForwardToEast(Plateau plateau, List<Rover> roverList) {
+		
+	}
+
+	private void moveForwardToNorth(Plateau plateau, List<Rover> roverList) {
+		
+	}
 }
 
 
