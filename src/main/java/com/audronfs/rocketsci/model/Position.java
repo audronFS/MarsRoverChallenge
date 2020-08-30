@@ -1,14 +1,19 @@
 package com.audronfs.rocketsci.model;
 
 public class Position {
+
 	private int x;
 	private int y;
 	private int orientation;
+	private int virtualX;
+	private int virtualY;
 
 	public Position(int x, int y, int orientation) {
 		this.x = x;
 		this.y = y;
 		this.orientation = orientation;
+		this.virtualX = x;
+		this.virtualY = y;
 	}
 
 	public int getX() {
@@ -35,4 +40,19 @@ public class Position {
 		this.orientation = orientation;
 	}
 
+	public int getVirtualX() {
+		return virtualX;
+	}
+
+	public void setVirtualX(int virtualX) {
+		this.virtualX = virtualX;
+	}
+
+	public int getVirtualY() {
+		return virtualY;
+	}
+
+	public void setVirtualY(int virtualY) {
+		this.virtualY = virtualY;
+	}
 }
