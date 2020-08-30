@@ -8,4 +8,8 @@ tmp/
 local.properties
 .settings/
 .loadpath
-.recommenders
+.recommenders  
+target/
+logs/
+.classpath
+.project
