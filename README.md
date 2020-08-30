@@ -1,9 +1,13 @@
 # Mars Rover Challenge
 
 This is my solution for the Mars Rover technical Challenge.
+
 The program sets a plateau in which a squad of robotic rovers will be deployed and will move through a command input.
+
 The program will check for correct coordinates input for the plateau and the rovers´ landing, and it will send an exception if command lines are wrong.
+
 It will also notify of possible collisions, rover movements out of boundaries, and a wrong landing.
+
 The result will be an initial and final analysis of the rovers´ movements and possible errors notifications.
 ## Getting Started
 
