@@ -57,7 +57,7 @@ public class MarsRoverOperationTest {
 	}
 
 	/**
-	 * TEST: CHECK INPUT WORKING OK
+	 * TEST: CHECK INPUT WORKS OK
 	 * 
 	 * @throws InvalidInputException
 	 */
