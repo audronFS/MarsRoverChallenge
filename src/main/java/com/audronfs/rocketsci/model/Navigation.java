@@ -6,10 +6,10 @@ import com.audronfs.rocketsci.util.Constants;
 
 public class Navigation {
 
-	Rover rover;
-	Plateau plateau;
-	List<Rover> roverList;
-	Position position;
+	private Rover rover;
+	private Plateau plateau;
+	private List<Rover> roverList;
+	private Position position;
 
 	public Navigation(Plateau plateau, Rover rover, Position position, List<Rover> roverList) {
 		this.rover = rover;
